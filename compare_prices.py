@@ -47,6 +47,8 @@ def compare_prices():
                     send_email(
                         f'There is a flight from {city_from} to {city_to} for {price} AUD. \n It leaves on {departure} and returns on {home}. This is {discount}% lower than your cutoff prie of {cutoff_price}.'
                     )
+                else:
+                    print('No deal!')
             else:
                 print(response.status_code, response.text)
 
